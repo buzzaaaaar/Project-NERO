@@ -1,0 +1,128 @@
+/* Background color for navigation bar */
+.navbar{
+  background-color: #5F6F52;
+}
+
+/* Default styles for search the button */
+.btn-custom {
+  background-color: white !important;
+ 
+}
+
+.btn-custom:hover {
+  background-color: yellow !important;
+ 
+}
+
+/* Background color, hover, shadow-color for items (Home, Shop,...)  */
+.item:hover{
+  background-color: aqua;
+  border-radius: 10px;
+  box-shadow: 5px 10px #888888;
+  transition: 0.5s;
+}
+
+/* Font color for images */
+.nav-link{
+  color: #fff;
+}
+
+.nav-item{
+	font-family: "Gotu", sans-serif;
+	font-size: 15px;
+}
+
+/* Positioning for carousel caption */
+.carousel-caption {
+    top: 250px;
+    bottom: auto;
+}
+
+/*Style for carousel captions*/
+.large-header{
+	font-family: "Aboreto", sans-serif;
+	font-size: 110px;
+	text-align: center;
+}
+.small-header{
+	font-family: "Sacramento", sans-serif;
+	font-size: 40px;
+	text-align: center;
+}
+.medium-header{
+	font-family: "Gotu", sans-serif;
+	font-size: 25px;
+	text-align: center;
+}
+
+/*Style for shop now button*/
+.shop-now-button{
+	font-family: "Gotu", sans-serif;
+	font-size: 15px;
+	text-align: center;
+	background-color: #F9EBC7;
+	border: none;
+	padding: 15px;
+	margin: 0;
+  	position: absolute;
+  	top: 110%;
+  	left: 50%;
+  	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+
+/*Style for cards*/
+.card{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+	border-radius: 10px;
+	padding: 5px;
+	text-align: center;
+	font-family: "Aboreto", sans-serif;
+	font-size: 25px;
+}
+
+/*Style for personal note*/
+.personal-note{
+	padding: 0 50px 0 50px;
+	background-image: url("images/note.jpg");
+	background-attachment: fixed;
+  	background-size: 100% 100%;
+}
+.rectangle {
+  	height: 400px;
+  	width: 1200px;
+	background-color: rgba(0,0,0,.4);
+	padding: 100px;
+	color: white;
+	text-align: center;
+	font-family: "Aboreto", sans-serif;
+	font-size: 25px;
+}
+.personal-note-content{
+	font-family: "Gotu", sans-serif;
+	font-size: 20px;
+}
+
+/*Style for join us*/
+.join-us-header{
+	text-align: center;
+	font-family: "Aboreto", sans-serif;
+	font-size: 25px;
+}
+.join-us{
+	text-align: center;
+	font-family: "Gotu", sans-serif;
+	font-size: 20px;
+	background-color: #B99470;
+}
+.email-form{
+	display:flex;
+  	justify-content: center;
+}
+
+/*Style for footer*/
+.footer{
+	padding: 10px;
+	background-color: #F9EBC7;
+}
