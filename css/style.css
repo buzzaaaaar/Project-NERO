@@ -17,6 +17,12 @@
   background-color: #5F6F52;
 }
 
+/* Navbar sticky top */
+.sticky-top{
+	position: sticky;
+	top: 0px;
+}
+
 .dropdown-menu{
 	background-color: #849973;
 }
