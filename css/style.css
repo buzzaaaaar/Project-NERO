@@ -1,6 +1,8 @@
 /* Background color for navigation bar */
 .navbar{
   background-color: #5F6F52;
+  position: fixed; 
+  top: 0;
 }
 
 
