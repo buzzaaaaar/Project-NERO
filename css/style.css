@@ -1,8 +1,21 @@
+/* Marquee Animation */
+.marquee-text {
+	white-space: nowrap;
+	overflow: hidden;
+	animation: marquee 10s linear infinite;
+	color: #000000;
+	background-color: #FFFFFF;
+  }
+  
+@keyframes marquee {
+	0% { transform: translateX(100%); }
+	100% { transform: translateX(-100%); }
+}
+
 /* Background color for navigation bar */
 .navbar{
   background-color: #5F6F52;
 }
-
 
 .dropdown-menu{
 	background-color: #849973;
