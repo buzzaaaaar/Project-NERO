@@ -1,8 +1,29 @@
+/* Marquee Animation */
+.marquee-text {
+	white-space: nowrap;
+	overflow: hidden;
+	animation: marquee 10s linear infinite;
+	color: #000000;
+	background-color: #FFFFFF;
+  }
+  
+@keyframes marquee {
+	0% { transform: translateX(100%); }
+	100% { transform: translateX(-100%); }
+}
+
 /* Background color for navigation bar */
 .navbar{
   background-color: #5F6F52;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
+/* Navbar sticky top */
+.sticky-top{
+	position: sticky;
+	top: 0px;
+}
 
 .dropdown-menu{
 	background-color: #849973;
@@ -162,7 +183,7 @@
 	color: white;
 	text-align: center;
 	font-family: "Aboreto", sans-serif;
-	font-size: 3rem;
+	font-size: 25px;
 	border-radius: 1%;
 	width: 90%;
 	left: 5%;
