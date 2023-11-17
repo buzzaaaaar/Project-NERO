@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Shop</title>
+    <!-- CDN link -->
+   
+    <!-- Bootstrap CDN with jquery -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="shop-custom.css"> 
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+       
+</head>
+<body>
+     <!-- jquery -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     
+    <!-- Bootsrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+      crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="shop.js"></script>
+    
+    <div class="container-fluid gx-0">
+    <!-- ===================================================  Top-Bar  ============================================================ -->
+        <div class="row text-center justify-content-center mx-3 header-top-container-div" style="background-color: var(--my-color);"> 
+          <marquee behavior="scroll" direction="left" scrollamount="10">Islandwide shipping In 5-7 business days </marquee>
+        </div>
+    <!-- ===================================================  NavBar  ============================================================ -->
+
+        <div class="sticky-top mx-3" style="background-color: none">
+          <div class="container-fluid align-items-center header-bottom-container-div">
+              <nav class="navbar navbar-expand-md">
+                  <div class="container-fluid">
+                      <!-- Logo -->
+                      <a class="navbar-brand" href="#">
+                          <img src="Images-shop/nero-logo-1.png" alt="logo" height="50">
+                      </a>
+                      <!-- Menu button for smaller windows -->
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <!-- NavBar left side -->
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                          <ul class="navbar-nav mb-0 mb-lg-0">
+                              <li class="nav-item ">
+                                  <a class="nav-link active " aria-current="page" href="#">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link active" aria-current="about-us" href="#">About Us</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link active" aria-current="Q-A" href="#">Q & A</a>
+                              </li>
+                          </ul>
+                          <!-- Search bar / Icons imported via a Boostrap website-->
+                          <form class="d-flex custom-search-form my-3" role="search">
+                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                              <button class="btn myCustom-Shop-search-button" type="submit"><i class="bi bi-search"></i></button>
+                          </form>
+                          <!-- NavBar Righ side - Cart,Account / Icons imported via Boostrap website  -->
+                          <div class="navbar-log-cart-container d-flex align-items-center justify-content-center justify-content-md-end ms-auto">                       
+                              <a class="mynavbar-brand-custom position-relative px-3" href="#">
+                                  <i class="bi bi-cart myCustom-Shop-icon p-1 "></i>
+                                  <span class="position-absolute top start-50% translate-middle badge rounded-pill bg-danger">
+                                    1
+                                    <span class="visually-hidden">unread messages</span>
+                                  </span>
+                              </a>
+                              <a class="mynavbar-brand-custom" href="#">
+                                  <i class="bi bi-person-circle myCustom-Shop-icon p-1"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </nav>
+          </div>
+      <!-- ===================================================  Catagory  ============================================================ -->
+      <div class="container-fluid myCustom-Shop-category py-2" style="border-radius: 0 0 15px 15px; background-color: var(--my-color2);">
+          <div class="row justify-content-end text-center">
+              <!-- Catagory area -->
+              <div class="col d-flex justify-content-center d-none d-md-block" style="border: 1px solid rgba(255, 0, 0, 0);">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <button class="btn btn-primary w-100 mycutom-cata-button" type="button">Clothing</button>
+                    </div>
+                    <div class="col-md-3">
+                      <button class="btn btn-primary w-100 mycutom-cata-button" type="button">Footwear</button>
+                    </div>
+                    <div class="col-md-3">
+                      <button class="btn btn-primary w-100 mycutom-cata-button" type="button">Perfume</button>
+                    </div>
+                    <div class="col-md-3">
+                      <button class="btn btn-primary w-100 mycutom-cata-button" type="button">Other</button>
+                    </div>
+                  </div>
+                </div>           
+              </div>
+              <!-- Sort Content by -->
+              <div class="col-md-2 col-3 d-flex justify-content-end" style="border: 1px solid rgba(255, 0, 0, 0);">
+                <div class="dropdown-center">
+                  <button class="btn btn-secondary dropdown-toggle myCutome-Sort-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sort by
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">By Price</a></li>
+                    <li><a class="dropdown-item" href="#">By Popularity</a></li>
+                    <li><a class="dropdown-item" href="#">By Name</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Filer Content  -->
+              <div class="col-md-1 col-2 d-flex justify-content-center" style="border: 1px solid rgba(255, 0, 0, 0); min-width: 50px;">
+                  <div class="d-inline-block">
+                      <button class="btn btn-primary myCutome-filter-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-filter"></i></button>
+      
+                      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Filter Items</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                                                                                                      
+                             <!-- Check boxes -->    
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-auto">
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                      <label class="form-check-label mx-1" for="flexCheckDefault">
+                                          Free Delivery
+                                      </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-auto">
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                      <label class="form-check-label mx-1" for="flexCheckDefault">
+                                         Special offers
+                                      </label>
+                                  </div>
+                                </div>
+                              </div>                             
+                            </div>
+
+                            <!-- Price Range -->                                                      
+                             <div class="container mt-3">
+                              <div class="row mx-2">Price range</div>
+                              <div class="row">
+                                <div class="col-9">
+                                  
+                                  <div class="row my-1">
+                                    <div class="col-3 d-flex align-items-center justify-content-center">
+                                      <p class="text-center my-0">Min</p>
+                                    </div>
+                                    <div class="col-9">
+                                      <input class="form-control" type="text" placeholder="Minimum Price" aria-label="default input example1">
+                                    </div>
+                                  </div>
+                                  <div class="row my-1">
+                                    <div class="col-3 d-flex align-items-center justify-content-center">
+                                      <p class="text-center my-0">Max</p>
+                                    </div>
+                                    <div class="col-9">
+                                      <input class="form-control" type="text" placeholder="Maximem Price" aria-label="default input example1">
+                                    </div>
+                                  </div>
+    
+                                </div>
+                                  <div class="col-3 d-flex align-items-center justify-content-center">
+                                      <button type="submit" class="btn myCustom-Shop-filter-button ">Confirm</button>
+                                  </div>
+                               </div>
+                             </div>
+
+
+
+                            <!-- Another section -->
+
+                         
+                            <!-- Catagory area Inside the filter body-->
+                            <div class="col d-flex justify-content-center d-md-none d-block">
+                              <div class="container my-3">
+                                <div class="row">
+                                  <div class="col-12 my-1">
+                                    <button class="btn btn-primary w-100 mycutom-cata-button" type="button">Clothing</button>
+                                  </div>
+                                  <div class="col-12 my-1">
+                                    <button class="btn btn-primary w-100 mycutom-cata-button" type="button">Footwear</button>
+                                  </div>
+                                  <div class="col-12 my-1">
+                                    <button class="btn btn-primary w-100 mycutom-cata-button" type="button">Perfume</button>
+                                  </div>
+                                  <div class="col-12 my-1">
+                                    <button class="btn btn-primary w-100 mycutom-cata-button" type="button">Other</button>
+                                  </div>
+                                </div>
+                              </div>  
+                                         
+                            </div>                        
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>   
+     <!-- ===================================================  Items  ============================================================ -->    
+     <div class="container-fluid">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-8 g-0 mt-0">
+          <!--------- Products------------>
+            <div class="col p-1">
+              <div class="card myCustom-Shop-item-card h-100">
+                <a href="#" class="card h-100 text-decoration-none">
+                  <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                      <i class="bi bi-cart myCustom-Shop-icon-item"></i>
+                  </button> 
+                        
+                  <div class="myCustom-Shop-image-container p-2">
+                    <img src="Images-shop/Shoe-1.png" class="card-img-top myCustom-Shop-itme-image" alt="...">
+                  </div>
+                  <div class="card-body myCustom-Shop-cardbody">
+                    <h5 class="card-title px-1">Product Name </i></h5>
+                    <div class="container d-flex p-0">
+                      <p>
+                        <del class="myCustom-Shop-discounted-price px-1">$200.00</del>
+                        <span class="myCustom-Shop-original-price px-1">$100.00</span>
+                      </p>
+                    </div>
+                    <div class="myCustom-Shop-rating-container">
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span class="myCustom-Shop-original-price px-1">(48)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer row gx-0">
+                    <div class="col-6">
+                        <small class="text-body-secondary">Free Shipping</small>
+                    </div>
+                    <div class="col-6 text-end">
+                        <span class="text-body-secondary mx-1 px-1 py-1 myCustom-Shop-item-offer" style="white-space: nowrap;">25% OFF</span>
+                    </div>
+                  </div>
+                
+                </a>
+              </div>
+            </div>
+            <!--------------------->
+          <!--------- Products------------>
+            <div class="col p-1">
+              <div class="card myCustom-Shop-item-card h-100">
+                <a href="#" class="card h-100 text-decoration-none">
+                  <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                      <i class="bi bi-cart myCustom-Shop-icon-item"></i>
+                  </button> 
+                        
+                  <div class="myCustom-Shop-image-container p-2">
+                    <img src="Images-shop/Shoe-2.png" class="card-img-top myCustom-Shop-itme-image" alt="...">
+                  </div>
+                  <div class="card-body myCustom-Shop-cardbody">
+                    <h5 class="card-title px-1">Product Name </i></h5>
+                    <div class="container d-flex p-0">
+                      <p>
+                        <del class="myCustom-Shop-discounted-price px-1">$200.00</del>
+                        <span class="myCustom-Shop-original-price px-1">$100.00</span>
+                      </p>
+                    </div>
+                    <div class="myCustom-Shop-rating-container">
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span class="myCustom-Shop-original-price px-1">(48)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer row gx-0">
+                    <div class="col-6">
+                        <small class="text-body-secondary">Free Shipping</small>
+                    </div>
+                    <div class="col-6 text-end">
+                        <span class="text-body-secondary mx-1 px-1 py-1 myCustom-Shop-item-offer" style="white-space: nowrap;">25% OFF</span>
+                    </div>
+                  </div>
+                
+                </a>
+              </div>
+            </div>
+            <!--------------------->
+          <!--------- Products------------>
+            <div class="col p-1">
+              <div class="card myCustom-Shop-item-card h-100">
+                <a href="#" class="card h-100 text-decoration-none">
+                  <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                      <i class="bi bi-cart myCustom-Shop-icon-item"></i>
+                  </button> 
+                        
+                  <div class="myCustom-Shop-image-container p-2">
+                    <img src="Images-shop/Shoe-3.png" class="card-img-top myCustom-Shop-itme-image" alt="...">
+                  </div>
+                  <div class="card-body myCustom-Shop-cardbody">
+                    <h5 class="card-title px-1">Product Name </i></h5>
+                    <div class="container d-flex p-0">
+                      <p>
+                        <del class="myCustom-Shop-discounted-price px-1">$200.00</del>
+                        <span class="myCustom-Shop-original-price px-1">$100.00</span>
+                      </p>
+                    </div>
+                    <div class="myCustom-Shop-rating-container">
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span class="myCustom-Shop-original-price px-1">(48)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer row gx-0">
+                    <div class="col-6">
+                        <small class="text-body-secondary">Free Shipping</small>
+                    </div>
+                    <div class="col-6 text-end">
+                        <span class="text-body-secondary mx-1 px-1 py-1 myCustom-Shop-item-offer" style="white-space: nowrap;">25% OFF</span>
+                    </div>
+                  </div>
+                
+                </a>
+              </div>
+            </div>
+            <!--------------------->
+          <!--------- Products------------>
+            <div class="col p-1">
+              <div class="card myCustom-Shop-item-card h-100">
+                <a href="#" class="card h-100 text-decoration-none">
+                  <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                      <i class="bi bi-cart myCustom-Shop-icon-item"></i>
+                  </button> 
+                        
+                  <div class="myCustom-Shop-image-container p-2">
+                    <img src="Images-shop/Shoe-4.png" class="card-img-top myCustom-Shop-itme-image" alt="...">
+                  </div>
+                  <div class="card-body myCustom-Shop-cardbody">
+                    <h5 class="card-title px-1">Product Name </i></h5>
+                    <div class="container d-flex p-0">
+                      <p>
+                        <del class="myCustom-Shop-discounted-price px-1">$200.00</del>
+                        <span class="myCustom-Shop-original-price px-1">$100.00</span>
+                      </p>
+                    </div>
+                    <div class="myCustom-Shop-rating-container">
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span class="myCustom-Shop-original-price px-1">(48)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer row gx-0">
+                    <div class="col-6">
+                        <small class="text-body-secondary">Free Shipping</small>
+                    </div>
+                    <div class="col-6 text-end">
+                        <span class="text-body-secondary mx-1 px-1 py-1 myCustom-Shop-item-offer" style="white-space: nowrap;">25% OFF</span>
+                    </div>
+                  </div>
+                
+                </a>
+              </div>
+            </div>
+            <!--------------------->
+          <!--------- Products------------>
+            <div class="col p-1">
+              <div class="card myCustom-Shop-item-card h-100">
+                <a href="#" class="card h-100 text-decoration-none">
+                  <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                      <i class="bi bi-cart myCustom-Shop-icon-item"></i>
+                  </button> 
+                        
+                  <div class="myCustom-Shop-image-container p-2">
+                    <img src="Images-shop/Shoe-1.png" class="card-img-top myCustom-Shop-itme-image" alt="...">
+                  </div>
+                  <div class="card-body myCustom-Shop-cardbody">
+                    <h5 class="card-title px-1">Product Name </i></h5>
+                    <div class="container d-flex p-0">
+                      <p>
+                        <del class="myCustom-Shop-discounted-price px-1">$200.00</del>
+                        <span class="myCustom-Shop-original-price px-1">$100.00</span>
+                      </p>
+                    </div>
+                    <div class="myCustom-Shop-rating-container">
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span class="myCustom-Shop-original-price px-1">(48)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer row gx-0">
+                    <div class="col-6">
+                        <small class="text-body-secondary">Free Shipping</small>
+                    </div>
+                    <div class="col-6 text-end">
+                        <span class="text-body-secondary mx-1 px-1 py-1 myCustom-Shop-item-offer" style="white-space: nowrap;">25% OFF</span>
+                    </div>
+                  </div>
+                
+                </a>
+              </div>
+            </div>
+            <!--------------------->
+          <!--------- Products------------>
+            <div class="col p-1">
+              <div class="card myCustom-Shop-item-card h-100">
+                <a href="#" class="card h-100 text-decoration-none">
+                  <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                      <i class="bi bi-cart myCustom-Shop-icon-item"></i>
+                  </button> 
+                        
+                  <div class="myCustom-Shop-image-container p-2">
+                    <img src="Images-shop/Shoe-2.png" class="card-img-top myCustom-Shop-itme-image" alt="...">
+                  </div>
+                  <div class="card-body myCustom-Shop-cardbody">
+                    <h5 class="card-title px-1">Product Name </i></h5>
+                    <div class="container d-flex p-0">
+                      <p>
+                        <del class="myCustom-Shop-discounted-price px-1">$200.00</del>
+                        <span class="myCustom-Shop-original-price px-1">$100.00</span>
+                      </p>
+                    </div>
+                    <div class="myCustom-Shop-rating-container">
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                      <span class="myCustom-Shop-original-price px-1">(48)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer row gx-0">
+                    <div class="col-6">
+                        <small class="text-body-secondary">Free Shipping</small>
+                    </div>
+                    <div class="col-6 text-end">
+                        <span class="text-body-secondary mx-1 px-1 py-1 myCustom-Shop-item-offer" style="white-space: nowrap;">25% OFF</span>
+                    </div>
+                  </div>
+                
+                </a>
+              </div>
+            </div>
+            <!--------------------->
+            
+      
+               
+        
+
+              
+          </div>
+     </div> 
+     
+     
+<!-- =============== end of the items-->
+
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+     
+    
+
+
+<p class="text-center">
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+  Dummy Content<br>
+
+</p>
+
+
+
+
+    
+</body>
+</html>
