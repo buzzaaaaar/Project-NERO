@@ -202,18 +202,27 @@
 
 /*Style for shop now button*/
 .shop-now-button{
+	display: inline-block;
 	font-family: "Gotu", sans-serif;
-	font-size: 15px;
+	font-size: 16px;
 	text-align: center;
-	background-color: #F9EBC7;
+	background-color: #FFFFFF;
+	color: #5F6F52;
 	border: none;
-	padding: 15px;
+	border-radius: 25px;
+	cursor: pointer;
+	padding: 12px 28px;
 	margin: 0;
   	position: absolute;
-  	top: 110%;
+  	top: 75%;
   	left: 50%;
+	transform: translate(-50%, -50%);
   	-ms-transform: translate(-50%, -50%);
-  	transform: translate(-50%, -50%);
+	transition-duration: 0.4s;
+}
+.shop-now-button:hover{
+  background-color: #5F6F52;
+  color: white;
 }
 
 /*Style for cards*/
