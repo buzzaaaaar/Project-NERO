@@ -176,15 +176,21 @@
 
 /* Background color, hover, shadow-color for items (Home, Shop,...)  */
 .nav-item:hover{
-  background-color: #B99470;
+  background-color: #ffffff;
   border-radius: 7px;
   transition: 0.5s;
-  color: #fff;
+  color: #5F6F52;
 }
 
 /* Font color for images */
 .nav-link{
-  color: #fff;
+  color: #ffffff;
+}
+.nav-link:hover{
+  background-color: #ffffff;
+  border-radius: 7px;
+  transition: 0.5s;
+  color: #5F6F52;
 }
 
 .nav-item{
