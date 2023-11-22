@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Offers|Nero </title>
+    <link rel="icon" type="image" href="images/favicon.ico">
+
+    <!-- Bootstrap -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<!-- Bootstrap CDN with jquery -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+rel="stylesheet" 
+integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+crossorigin="anonymous">
+
+	<!-- font awesome link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   	<!-- font family link -->
+<link href="https://fonts.googleapis.com/css?family=Aboreto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gotu&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="offer.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+   <!-- jquery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     
+   <!-- Bootsrap JavaScript -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+     crossorigin="anonymous"></script>
+
+   <!-- Custom JavaScript -->
+   <script src="shop.js"></script>
+    <div class="container-fluid">
+      <div class="shoppingTag" style="background-color: #FFFFFF;text-align: center;"><marquee behavior=scroll direction="left" scrollamount="10">Islandwide shipping In 5-7 business days</marquee></div>
+<nav class="navbar navbar-expand-lg"> <a class="navbar-brand" href="#"><img src="images/nero-logo-1.png" width="50" height="50" alt=""/></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fa fa-bars" style="color: #000000;"></i></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Shop&nbsp; </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a></div>
+          </li>
+          <li class="nav-item"> <a class="nav-link" href="offer.html">Offers</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#">About us</a></li>
+			<li class="nav-item mx-2 mx-sm-2">
+            <div class="input-group">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">&nbsp;
+              <button class="btn btn-outline-success btn-custom" type="submit">
+                <i class="fa fa-search" style="color: black;"></i>
+              </button>
+            </div>
+          </li>
+        </ul>
+		  <ul class="navbar-nav ms-auto">
+          <!-- Cart -->
+          <li class="nav-item mx-2 item">
+            <a class="nav-link" href="#">
+              <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 30px;"></i>
+            </a>
+          </li>
+          <!-- User with added margin -->
+          <li class="nav-item mx-2 item">
+            <a class="nav-link" href="#">
+              <i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 30px;"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav><br>
+                  <!-- Filer Content  -->
+                  <div class="col-md-1 col-2 d-flex justify-content-center" style="border: 1px solid rgba(255, 0, 0, 0); min-width: 50px;">
+                    <div class="d-inline-block">
+                        <button class="btn btn-primary myCutome-filter-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-filter">filter</i></button>
+        
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                          <div class="offcanvas-header">
+                              <h5 class="offcanvas-title" id="offcanvasRightLabel">Filter Items</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                          </div>
+                          <div class="offcanvas-body">
+                                                                                                        
+                               <!-- Check boxes -->    
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label mx-1" for="flexCheckDefault">
+                                            Free Delivery
+                                        </label>
+                                    </div>
+                                  </div>
+                                </div>                                                            
+                              </div>
+  
+                              <!-- Price Range -->                                                      
+                               <div class="container mt-3">
+                                <div class="row mx-2">Price range</div>
+                                <div class="row">
+                                  <div class="col-9">
+                                    
+                                    <div class="row my-1">
+                                      <div class="col-3 d-flex align-items-center justify-content-center">
+                                        <p class="text-center my-0">Min</p>
+                                      </div>
+                                      <div class="col-9">
+                                        <input class="form-control" type="text" placeholder="Minimum Price" aria-label="default input example1">
+                                      </div>
+                                    </div>
+                                    <div class="row my-1">
+                                      <div class="col-3 d-flex align-items-center justify-content-center">
+                                        <p class="text-center my-0">Max</p>
+                                      </div>
+                                      <div class="col-9">
+                                        <input class="form-control" type="text" placeholder="Maximem Price" aria-label="default input example1">
+                                      </div>
+                                    </div>
+      
+                                  </div>
+                                    <div class="col-3 d-flex align-items-center justify-content-center">
+                                        <button type="submit" class="btn myCustom-Shop-filter-button ">Confirm</button>
+                                    </div>
+                                 </div>
+                               </div>
+  
+  
+  
+                              
+  
+                           
+                                                 
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+
+<!-- Another section -->
+<div class="container-fluid">
+    <div class="row">
+      <!--------- Products------------>
+          <div class="col p-1">
+          <div class="card myCustom-Shop-item-card h-100">
+            <a href="#" class="card h-100 text-decoration-none">
+              <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                  <i class="bi bi-cart myCustom-Shop-icon-item"></i>
+              </button> 
+                    
+              <div class="myCustom-Shop-image-container p-2">
+                <img src="images/sp1.png" class="card-img-top myCustom-Shop-itme-image" alt="...">
+              </div>
+              <div class="card-body myCustom-Shop-cardbody">
+                <h5 class="card-title px-1">Spa Ceylon Virgin Coconut Gentle Hair Cleanser</i></h5>
+                <div class="container d-flex p-0">
+                  <p>
+                    <del class="myCustom-Shop-discounted-price px-1">$15.00</del>
+                    <span class="myCustom-Shop-original-price px-1">$12.00</span>
+                  </p>
+                </div>
+                <div class="myCustom-Shop-rating-container">
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span class="myCustom-Shop-original-price px-1">(48)</span>
+                </div>
+              </div>
+              <div class="card-footer row gx-0">
+                <div class="col-6">
+                    <small class="text-body-secondary">Free Shipping</small>
+                </div>
+                <div class="col-6 text-end">
+                    <span class="text-body-secondary mx-1 px-1 py-1 myCustom-Shop-item-offer" style="white-space: nowrap;">25% OFF</span>
+                </div>
+              </div>
+            
+            </a>
+          </div>
+        </div>
+ 
+        <!--------------------->
+         <!--------- Products------------>
+         <div class="col p-1">
+          <div class="card myCustom-Shop-item-card h-100">
+            <a href="#" class="card h-100 text-decoration-none">
+              <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                  <i class="bi bi-cart myCustom-Shop-icon-item"></i>
+              </button> 
+                    
+              <div class="myCustom-Shop-image-container p-2">
+                <img src="images/i5.png" class="card-img-top myCustom-Shop-itme-image" alt="..." >
+              </div>
+              <div class="card-body myCustom-Shop-cardbody">
+                <h5 class="card-title px-1">L’Oréal   ANTI-AGING EYE CREAM</i></h5>
+                <div class="container d-flex p-0">
+                  <p>
+                    <del class="myCustom-Shop-discounted-price px-1">$32.20</del>
+                    <span class="myCustom-Shop-original-price px-1">$28.00</span>
+                  </p>
+                </div>
+                <div class="myCustom-Shop-rating-container">
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span class="myCustom-Shop-original-price px-1">(48)</span>
+                </div>
+              </div>
+              <div class="card-footer row gx-0">
+                <div class="col-6">
+                    <small class="text-body-secondary">Free Shipping</small>
+                </div>
+                <div class="col-6 text-end">
+                    <span class="text-body-secondary mx-1 px-1 py-1 myCustom-Shop-item-offer" style="white-space: nowrap;">15% OFF</span>
+                </div>
+              </div>
+            
+            </a>
+          </div>
+        </div>
+ 
+        <!--------------------->
+      <!--------- Products------------>
+   
+        <div class="col p-1">
+          <div class="card myCustom-Shop-item-card h-100">
+            <a href="#" class="card h-100 text-decoration-none">
+              <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                  <i class="bi bi-cart myCustom-Shop-icon-item"></i>
+              </button> 
+                    
+              <div class="myCustom-Shop-image-container p-2">
+                <img src="images/se3.png" class="card-img-top myCustom-Shop-itme-image" alt="...">
+              </div>
+              <div class="card-body myCustom-Shop-cardbody">
+                <h5 class="card-title px-1">SEPHORA CLARIFYING TONER WITH NIACINAMIDE AND ZINC</i></h5>
+                <div class="container d-flex p-0">
+                  <p>
+                    <del class="myCustom-Shop-discounted-price px-1">$50.70</del>
+                    <span class="myCustom-Shop-original-price px-1">$39.00</span>
+                  </p>
+                </div>
+                <div class="myCustom-Shop-rating-container">
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span class="myCustom-Shop-original-price px-1">(48)</span>
+                </div>
+              </div>
+              <div class="card-footer row gx-0">
+                <div class="col-6">
+                    <small class="text-body-secondary">Free Shipping</small>
+                </div>
+                <div class="col-6 text-end">
+                    <span class="text-body-secondary mx-1 px-1 py-1 myCustom-Shop-item-offer" style="white-space: nowrap;">30% OFF</span>
+                </div>
+              </div>
+            
+            </a>
+          </div>
+        </div>
+       </div>
+        <!--------------------->
+       
+      
+      <!--------- Products------------>
+      <div class="row">
+        <div class="col p-1">
+          <div class="card myCustom-Shop-item-card h-100">
+            <a href="#" class="card h-100 text-decoration-none">
+              <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                  <i class="bi bi-cart myCustom-Shop-icon-item"></i>
+              </button> 
+                    
+              <div class="myCustom-Shop-image-container p-2">
+                <img src="images/m6.png" class="card-img-top myCustom-Shop-itme-image" alt="...">
+              </div>
+              <div class="card-body myCustom-Shop-cardbody">
+                <h5 class="card-title px-1">Mac cosmetics BRUSH OF SNOW ESSENTIAL BRUSH KIT </i></h5>
+                <div class="container d-flex p-0">
+                  <p>
+                    <del class="myCustom-Shop-discounted-price px-1">$75.00</del>
+                    <span class="myCustom-Shop-original-price px-1">$55.00</span>
+                  </p>
+                </div>
+                <div class="myCustom-Shop-rating-container">
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span class="myCustom-Shop-original-price px-1">(48)</span>
+                </div>
+              </div>
+              <div class="card-footer row gx-0">
+                <div class="col-6">
+                    <small class="text-body-secondary">Free Shipping</small>
+                </div>
+                <div class="col-6 text-end">
+                    <span class="text-body-secondary mx-1 px-1 py-1 myCustom-Shop-item-offer" style="white-space: nowrap;">35% OFF</span>
+                </div>
+              </div>
+            
+            </a>
+          </div>
+        </div>
+        
+        <!--------------------->
+        <!--------- Products------------>
+        <div class="col p-1">
+          <div class="card myCustom-Shop-item-card h-100">
+            <a href="#" class="card h-100 text-decoration-none">
+              <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                  <i class="bi bi-cart myCustom-Shop-icon-item"></i>
+              </button> 
+                    
+              <div class="myCustom-Shop-image-container p-2">
+                <img src="images/o5.png" class="card-img-top myCustom-Shop-itme-image" alt="...">
+              </div>
+              <div class="card-body myCustom-Shop-cardbody">
+                <h5 class="card-title px-1">Olay SENSITIVE MINERAL SUNSCREEN SPF30 </i></h5>
+                <div class="container d-flex p-0">
+                  <p>
+                    <del class="myCustom-Shop-discounted-price px-1">$36.38</del>
+                    <span class="myCustom-Shop-original-price px-1">$27.99</span>
+                  </p>
+                </div>
+                <div class="myCustom-Shop-rating-container">
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span class="myCustom-Shop-original-price px-1">(48)</span>
+                </div>
+              </div>
+              <div class="card-footer row gx-0">
+                <div class="col-6">
+                    <small class="text-body-secondary">Free Shipping</small>
+                </div>
+                <div class="col-6 text-end">
+                    <span class="text-body-secondary mx-1 px-1 py-1 myCustom-Shop-item-offer" style="white-space: nowrap;">30% OFF</span>
+                </div>
+              </div>
+            
+            </a>
+          </div>
+        </div>
+ 
+        <!--------------------->
+      <!--------- Products------------>
+      
+        <div class="col p-1">
+          <div class="card myCustom-Shop-item-card h-100">
+            <a href="#" class="card h-100 text-decoration-none">
+              <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                  <i class="bi bi-cart myCustom-Shop-icon-item"></i>
+              </button> 
+                    
+              <div class="myCustom-Shop-image-container p-2">
+                <img src="images/se2.png" class="card-img-top myCustom-Shop-itme-image" alt="...">
+              </div>
+              <div class="card-body myCustom-Shop-cardbody">
+                <h5 class="card-title px-1">Sephora HYALURONIC ACID MOISTURIZER</i></h5>
+                <div class="container d-flex p-0">
+                  <p>
+                    <del class="myCustom-Shop-discounted-price px-1">$25.00</del>
+                    <span class="myCustom-Shop-original-price px-1">$18.00</span>
+                  </p>
+                </div>
+                <div class="myCustom-Shop-rating-container">
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span><i class="bi bi-star myCustom-Shop-rating-stars"></i></span>
+                  <span class="myCustom-Shop-original-price px-1">(48)</span>
+                </div>
+              </div>
+              <div class="card-footer row gx-0">
+                <div class="col-6">
+                    <small class="text-body-secondary">Free Shipping</small>
+                </div>
+                <div class="col-6 text-end">
+                    <span class="text-body-secondary mx-1 px-1 py-1 myCustom-Shop-item-offer" style="white-space: nowrap;">30% OFF</span>
+                </div>
+              </div>
+            
+            </a>
+          </div>
+        </div>
+        </div>
+        <!--------------------->     
+        <!--------------------->
+       
+  
+ </div> 
+ </div>
+ <br><br><br>
+<!----------------------------------footer----------------------------->
+ 
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col col-6 offset-xl-0 col-xl-3">
+<br>	<div class="text-right">
+        <ul>
+		  <img src="images/nero-logo-1.png" width="100" height="100" alt=""/>
+        </ul>
+		  </div>
+      </div>
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fa fa-facebook-f"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+	  <div class="text-white text-center rights">© 2023 Nero Beauty Design Themes</div>
+  </div>
+	
+</footer>
+	</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+  <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+</body>
+</html>
