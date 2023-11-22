@@ -571,3 +571,95 @@ body.cs{
   .swiper-pagination-bullet-active{
 	background-color: #4070f4;
   }
+
+/* Get help page */
+.shipping{
+	background-color: #A9B388;
+	background-attachment: fixed;
+  	background-size: 100% 100%;
+}
+.rectangle {
+	background-color: rgba(0,0,0,.4);
+	padding: 5%;
+	color: white;
+	text-align: center;
+	font-family: "Aboreto", sans-serif;
+	font-size: 35px;
+	border-radius: 1%;
+	width: 90%;
+	left: 5%;
+}
+.shipping-content{
+	text-align: left;
+	font-family: "Gotu", sans-serif;
+	font-size: 1rem;
+}
+
+.returns{
+	background-color: #A9B388;
+	background-attachment: fixed;
+  	background-size: 100% 100%;
+}
+.rectangle {
+	background-color: rgba(0,0,0,.4);
+	padding: 5%;
+	color: white;
+	text-align: center;
+	font-family: "Aboreto", sans-serif;
+	font-size: 35px;
+	border-radius: 1%;
+	width: 90%;
+	left: 5%;
+}
+.returns-content{
+	text-align: left;
+	font-family: "Gotu", sans-serif;
+	font-size: 1rem;
+}
+
+
+
+/* Company page*/
+.services{
+	background-color: #B99470;
+	background-attachment: fixed;
+  	background-size: 100% 100%;
+}
+.rectangle {
+	background-color: rgba(0,0,0,.4);
+	padding: 5%;
+	color: white;
+	text-align: center;
+	font-family: "Aboreto", sans-serif;
+	font-size: 35px;
+	border-radius: 1%;
+	width: 90%;
+	left: 5%;
+}
+.services-content{
+	text-align: left;
+	font-family: "Gotu", sans-serif;
+	font-size: 1rem;
+}
+
+.privacy{
+	background-color: #B99470;
+	background-attachment: fixed;
+  	background-size: 100% 100%;
+}
+.rectangle {
+	background-color: rgba(0,0,0,.4);
+	padding: 5%;
+	color: white;
+	text-align: center;
+	font-family: "Aboreto", sans-serif;
+	font-size: 35px;
+	border-radius: 1%;
+	width: 90%;
+	left: 5%;
+}
+.privacy-content{
+	text-align: left;
+	font-family: "Gotu", sans-serif;
+	font-size: 1rem;
+}
