@@ -1,0 +1,114 @@
+/* Navbar */
+/* =========================== NavBar and Top header =========================== */
+.header-top-container-div{
+    /* background-color: var(--my-color); */
+    height: 30px;
+    background-color: var(--my-Color-Pallette-Cornsilk);
+}
+body {
+  background-color: var(--my-Color-Pallette-Lemon_Meringue) 
+}
+.header-bottom-container-div {
+  background-color: var(--my-main-color);
+  border-bottom-left-radius: 15px; /* Adjust the value as needed */
+  border-bottom-right-radius: 15px;
+    
+}
+
+/* Set the colors for the icon */
+.myCustom-Shop-search-button{
+  color: #ffffff; 
+  border-color: #ffffff; 
+}
+.myCustom-Shop-search-button:hover {
+  color: var(--my-Search-Logo-color);
+  border-color: var(--my-Search-Logo-color);
+  background-color: #2a772a85;
+}
+
+.custom-search-form {
+  margin-left: 20px; /* Search Margin with Q&A */
+}
+
+.myCustom-Shop-icon {
+  font-size: 2rem; /* Adjust image Size */
+  border-radius: 10px; /* Make it circular */
+  transition: background-color 0.3s; 
+}
+
+.myCustom-Shop-icon{
+  font-size: 2rem;
+  color: #ffffff;
+  background-color: transparent;
+}
+.myCustom-Shop-icon:hover{
+
+  background-color: var(--my-Color-Pallette-Camel); 
+  color:#2b5eac
+}
+
+.mynavbar-brand-custom{
+  border: none;
+  color: #000;
+}
+
+.nav-link{
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+.nav-link:hover{
+  background-color: var(--my-color-transition);
+}
+  
+
+
+/* Product details */
+.myCustom-shopitem-details-list{
+  background-color: var(--my-Color-Pallette-Lemon_Meringue);
+  border-color: var(--my-Color-Pallette-Alloy_Orange);
+
+}
+.myCustom-shopitem-details-list1{
+  
+  background-color: #ba947049;
+  background: linear-gradient(to right, transparent, #ba9470a2, transparent);
+
+}
+.myCustom-shopitem-details-list2{
+  
+  background-color: var(--my-Color-Pallette-Lemon_Meringue);
+  border-color: var(--my-Color-Pallette-Camel);
+
+}
+
+/* Image Section */
+.myCutom-itemDetails-image-container{
+  border-color: var(--my-Color-Pallette-Camel);
+  background: radial-gradient(circle at center, #fcfcfc 0%, transparent 90%, transparent 100%);
+}
+
+
+/* =========================== Root area =========================== */
+
+:root {
+    --my-Color-Pallette-Dark_Olive_Green:#627357;
+    --my-Color-Pallette-Laurel_Green:#A9B489;
+    --my-Color-Pallette-Cornsilk:#FCFCE4;
+    --my-Color-Pallette-Lemon_Meringue:#F9ECC9;
+    --my-Color-Pallette-Camel:#BA9470;
+    --my-Color-Pallette-Alloy_Orange:#C66828;
+    --my-Color-Pallette-Russet:#783E19;
+    
+    
+    --my-color: #ffffff;
+    --my-main-color: #5F6F52;
+    --my-color2: #738167;
+    --my-color3: #5fff7a;
+    --my-color-transition: #ffffff;
+    --my-Search-Logo-color: #00FF00;  /* Change Search-Logo-Border-color-hover */
+    
+    --my-Catagory-button-color: #5F6F52;  /* Change category-button-color */
+    --my-Catagory-button-color-hover: #8fa080;  /* Change category-button-color-hover */
+  
+    /**/
+  } 

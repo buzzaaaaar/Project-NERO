@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop_Admin</title>
+    <!-- CDN link -->
+   
+    <!-- Bootstrap CDN with jquery -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="shop_item_Admin.css"> 
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+     <!-- Bootsrap JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+       crossorigin="anonymous"></script>
+ 
+     <!-- Custom JavaScript -->
+     <script src="shop-Admin.js"></script>
+
+
+     <!-- ------------------------------------------------------ Content ------------------------------------------------------ -->
+
+     
+     
+     <div class="container-fluid myCustom-Admin-container">
+     <!-- ----------------- NavBar ----------------- -->
+          <div class="sticky-top mx-3" style="background-color: none">
+            <div class="container-fluid align-items-center myCustom-Admin-NavBar">
+                <nav class="navbar navbar-expand-md">
+                    <div class="container-fluid">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="#">
+                            <img src="../Images-shop/nero-logo-1.png" alt="logo" height="50">
+                        </a>
+                        <h1 class="text-center mx-5">Admin Panel</h1>                        
+                    </div>
+                </nav>
+            </div>
+          </div>
+
+    <!-- ----------------- ADD items ----------------- -->
+
+
+<!-- ============================================================================================================================================= -->
+
+        <form action="shop-DB-manage.php" method="post" enctype="multipart/form-data">
+          <div class="container my-3">
+
+            <div class="row my-3">
+              <div class="col-2 d-flex align-items-center justify-content-center">
+                <div>Product Name</div>
+              </div>
+              <div class="col-10">
+                <input type="text" class="form-control" placeholder="Product name" aria-label="product-name" aria-describedby="button-addon2" name="Product_Name">
+              </div>
+            </div>
+
+            <div class="row my-3">
+              <div class="col-2 d-flex align-items-center justify-content-center">
+                <div> Product Price</div>
+              </div>
+              <div class="col-10">
+                <input type="text" class="form-control" placeholder="Product Price" aria-label="product-price" aria-describedby="button-addon2" name="product_Price" id="Product_Price">
+              </div>
+            </div>
+
+            <div class="row my-3">
+              <div class="col-2 d-flex align-items-center justify-content-center">
+                <div> Discount</div>
+              </div>
+              <div class="col-10">
+                <input type="text" class="form-control" placeholder="Discount (optional)" aria-label="product-discount" aria-describedby="button-addon3" name="Discount" id="Discount">
+              </div>
+            </div>
+
+            <!-- Choose Brands -->
+            <div class="row my-3">
+              <div class="col-2 d-flex align-items-center justify-content-center">
+                <div>Brand</div>
+              </div>
+              <div class="col-10">
+                <select class="form-select" aria-label="Default select example" name="brand">
+                  <option value="Nero" selected>Nero</option>
+                  <option value="L’Oréal">L’Oréal</option>
+                  <option value="Olays">Olays</option>
+                  <option value="Sephora">Sephora</option>
+                  <option value="Spa Ceylon">Spa Ceylon</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Choose Brands -->
+            <div class="row my-3">
+              <div class="col-2 d-flex align-items-center justify-content-center">
+                <div>Category</div>
+              </div>
+              <div class="col-10">
+                <select class="form-select" aria-label="Default select example" name="category">
+                  <option value="Makeup" selected>Makeup</option>
+                  <option value="Skincare">Skincare</option>
+                  <option value="Haircare">Haircare</option>
+                  <option value="Body-care">Body care</option>
+                </select>
+              </div>
+            </div>
+
+           
+
+
+
+            <div class="container my-5">
+              <p>Free Shipping</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="free_shipping" id="inlineRadio1" value="1">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="free_shipping" id="inlineRadio2" value="0" checked>
+                <label class="form-check-label" for="inlineRadio2">No</label>
+              </div>
+            </div>
+
+            <div class="container my-5">
+              <p>Enter Item Image</p>
+              <div class="input-group mb-3">
+                <input type="file" class="form-control" id="product_image" name="product_image">
+                <label class="input-group-text" for="product_image">Upload</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="GetAndSubmit">Submit</button>
+                      
+          </div>
+        </form>
+<!-- Data Display And delete -->
+
+        <h2>Product</h2>
+            
+            <table class="table table-hover" id="dataTable" border="1">
+                <tr>
+                    <th>Product_ID</th>
+                    <th>Product_Name</th>
+                    <th>Free_Shipping</th>
+                    <th>Product_Image</th>
+                    <th>Product_Price</th>
+                    <th>Discount</th>
+                    <th>Discount_Percentage</th>
+                    <th>Brand</th>
+                    <th>Category</th>
+                    
+                </tr>
+            </table>
+
+            <div class="container m-4">
+              <h2>Delete Product</h2>
+              <label for="productIdInput">Product ID:</label>
+              <input type="text" id="productIdInput" placeholder="Type Product ID" />
+              <button onclick="deleteProduct()">Delete Product</button>
+            </div>
+
+            <script>
+              // Fetch data from the server and update the table
+              fetch('shop-DB-manage.php')
+                  .then(response => response.json())
+                  .then(data => {
+                      var table = document.getElementById('dataTable');
+                      data.forEach(function(product) {
+                          var row = table.insertRow();
+                          row.insertCell(0).innerText = product.Product_ID;
+                          row.insertCell(1).innerText = product.Product_Name;
+                          row.insertCell(2).innerText = product.Free_Shipping;
+                          row.insertCell(3).innerText = product.Product_Image;
+                          row.insertCell(4).innerText = product.Product_Price;
+                          row.insertCell(5).innerText = product.Discount;
+                          row.insertCell(6).innerText = product.Discount_Percentage;
+                          row.insertCell(7).innerText = product.Product_Brand;
+                          row.insertCell(8).innerText = product.Product_Category;
+                      });
+                  })
+                  .catch(error => console.error('Error:', error));
+
+
+                  function deleteProduct() {
+                      var productId = document.getElementById('productIdInput').value;
+
+                      // Send the product ID to the server for deletion
+                      fetch('shop-DB-delete-product.php', {
+                          method: 'POST',
+                          headers: {
+                              'Content-Type': 'application/json',
+                          },
+                          body: JSON.stringify({ productId: productId }),
+                      })
+                          .then(response => response.json())
+                          .then(data => {
+                              console.log('Product deleted:', data);
+                              // Refresh the table after deletion
+                              location.reload();
+                          })
+                          .catch(error => console.error('Error:', error));
+                  }
+              </script>
+
+<!-- --------------------------- -->
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    
+</body>
+</html>

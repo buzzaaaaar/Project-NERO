@@ -1,0 +1,85 @@
+
+/* ================ Search Bar ================ */
+.mySearch-box-container{
+    width: 300px;
+    background: #e7e7e7;
+    margin-left: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.mySearch-input-container{
+    display: flex;
+    align-items: center;
+    padding:  2px;
+}
+
+.mySearch-input{
+    flex: 1;
+    height: 50px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 18px ;
+    color: #000000;
+}
+
+.myCustom-search-button{
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.myCustom-search-icon{
+    width: 25px;
+    color: #555;
+    font-size: 22px;
+
+}
+
+.mySearch-results-container{
+    max-height: 300px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 100%; /* Position the results container below the search input */
+    left: 0;
+    width: 100%;
+   
+    background-color: var(--my-Color-Pallette-Lemon_Meringue);
+    z-index: 1
+}
+
+.mySearch-results-container ul{
+    border-top: 1px solid #999;
+    padding: 15px 10px;
+   
+}
+.mySearch-results-container ul li{
+    list-style: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.mySearch-results-container ul li:hover{
+    background-color: #999;
+}
+
+.mySearch-results-container a {
+    text-decoration: none; 
+    color: inherit; 
+    cursor: pointer;
+}
+
+
+/* =========================== Root area =========================== */
+
+:root {
+    --my-Color-Pallette-Dark_Olive_Green:#627357;
+    --my-Color-Pallette-Laurel_Green:#A9B489;
+    --my-Color-Pallette-Cornsilk:#FCFCE4;
+    --my-Color-Pallette-Lemon_Meringue:#F9ECC9;
+    --my-Color-Pallette-Camel:#BA9470;
+    --my-Color-Pallette-Alloy_Orange:#C66828;
+    --my-Color-Pallette-Russet:#783E19;
+
+  }
