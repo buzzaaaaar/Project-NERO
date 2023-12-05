@@ -19,14 +19,14 @@
   border-bottom-right-radius: 15px;
 }
 
-
 /* Background color, hover, shadow-color for items (Home, Shop,...)  */
 .nav-item:hover{
 	background-color: #B99470;
 	border-radius: 7px;
 	transition: 0.5s;
-    color:#fff;
-  }
+  color:#fff;
+}
+
 /* Navbar sticky top */
 .sticky-top{
 	position: sticky;
@@ -104,34 +104,16 @@
 	height: 40px;
 	transition-duration: 900ms;
   }
-/*Style for footer*/
-.rights{
-	padding-top: 2%;
-}
-/*Style for list background*/
-
-
 
 
 
 
 
 /*body*/
-.container3{
-  background-image: url(../images/listbg.jpg);
+.bgbrand{
+	background-image: url(../images/listbg.jpg);
 	background-size: cover;
 	background-attachment: fixed;
-  
-  margin: 0;
-  padding: 0;
-}
-.card3{
-	width: 100%;
-  
-  
-}
-.col{
-  margin: 0;
 }
 
 *{
@@ -141,52 +123,64 @@
 }
 
 
-
-
-.col{
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	max-width: 300px;
-	margin: 100px;
+.page-title{
+	padding-top: 20px;
+	padding-bottom: 0;
+	font-family: 'Josefin Sans';
 	text-align: center;
-	font-family: "aboreto";
-	background-color: #f9f4f2;
+}
+
+
+  /*cards*/
+.listP{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 15px;
+	
+}
+.listP .item{
+	background-color:bisque;
+	padding: 20px;
 	border-radius: 20px;
+	
+	
+}
+.name{
+  font-family:"Aboreto", sans-serif ;
+  font-size: 25px;
+}
+.dis{
+	font-family: "Gotu", sans-serif;
+	font-size: 15px;
+}
+.card{
+  width: 50%;
+}
+.card-mb-3{
+	margin: auto;
+	
+}
+.col-md-4 .img{
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@media(max-width: 426px){
+  .card{
+    width: 80%;
+}
+}
+
+
+
+
+/*Card Hover in animation */
+.card{
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/* Hover out animation */
+.card:not(:hover){
+	animation: scale-down-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   }
-
-  .description{
-	font-family: "gotu";
-	width: 250px;
-  }
-  
-  .price {
-	color: grey;
-	font-size: 22px;
-  }
-  
-  .card button {
-	border: none;
-	outline: 0;
-	padding: 12px;
-	color: white;
-	background-color: #000;
-	text-align: center;
-	cursor: pointer;
-	width: 100%;
-	font-size: 18px;
-	border-radius: 15px;
-    right: unset;
-    top: unset;
-  }
-  
-  .card button:hover {
-	opacity: 0.7;
-  }
-
-
-
-
-
-
 
 
 
@@ -263,3 +257,21 @@
     width: 100%;
 }
 }
+@keyframes scale-down-center {
+	0% {
+	  transform: scale(1.2);
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }
+  
+  @keyframes scale-up-center {
+	0% {
+	  transform: scale(1);
+	}
+	100% {
+	  transform: scale(1.2);
+	}
+	
+  }
