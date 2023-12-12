@@ -1,9 +1,9 @@
 <?php
 
-$server = "localhost";
-$user = "root";
-$pw = "";
-$db = "nsbm"; 
+$server = "167.99.67.188";
+$user = "nero";
+$pw = "bD4z92R9";
+$db = "neroweb";
 
 $conn = new mysqli($server, $user, $pw, $db);
 
