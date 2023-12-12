@@ -40,11 +40,14 @@
                 <form>
                     <p>SHIPPING</p>
                     <select id="shippingOption">
+                        
                         <option class="text-muted" value="500">Fast-Delivery- Rs.500.00</option>
-                        <option class="text-muted" value="300" selected>Standard-Delivery- Rs.300.00</option>
+                        <option class="text-muted" value="300">Standard-Delivery- Rs.300.00</option>
                     </select>
-                    <p>GIVE CODE</p>
-                    <input id="code" placeholder="Enter your code">
+                    <div class="row">
+                        USER ID: <br>
+                        <input type="text" name="userId">
+                    </div>
                 </form>
                 <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                     <div class="col">TOTAL PRICE</div>

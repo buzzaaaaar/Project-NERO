@@ -5,29 +5,32 @@ function loadCartItems() {
         url: "cart_items.php",
         dataType: "html",
         success: function (data) {
-            // Replace the content of the cart with the fetched data
+            // Filling the content of the cart with the fetched data
             $('.cart').html(data);
 
             $.when(updateTotalPrice()).done(function () {
                 console.log('Total price updated');
-                setInitialShipping(); //used this to calculate "chekoutPrice = totalPrice + 300(default shipping method)";
+                setInitialShipping();
             });
         },
         error: function (xhr, status, error) {
             console.error("Error fetching cart items:", status, error);
+            alert("Error fetching cart items. Please try again later.");
         }
+
+
     });
 }
 
-// Call the function to fetch and display cart items when the page loads
+// Call the function to fetch and display cart items, when the page loads
 $(document).ready(function () {
     loadCartItems();
 });
 
 //Function to set the initial shipping price and calculate checkoutTotal
 function setInitialShipping() {
-    var initialShippingPrice = 300;
-    $('#checkoutTotal').setText("Standard-Delivery- Rs.300.00");
+    var initialShippingPrice = 0.00;
+    $('#shippingOption').val('0').change();
     updateCheckoutTotal(initialShippingPrice);
 }
 
@@ -70,29 +73,33 @@ function updateQuantityInDatabase(productCode, newQuantity) {
 
 
 
-//======================= Event handler for quantity buttons (+ or - button in the cart view) =================//
+//====================vent handler for quantity buttons (+ or - button in the cart view)=======================//
 $(document).on('click', '.quantity', function (e) {
     e.preventDefault();
+
     var productCode = $(this).data('product-code');
     var quantityElement = $('.qty[data-product-code="' + productCode + '"]');
     var currentQty = parseInt(quantityElement.text());
 
+    var newQuantity;
+
     if ($(this).text() === '-') {
-        if (currentQty > 1) {
-            quantityElement.text(currentQty - 1);
-            
-            updateQuantityInDatabase(productCode, currentQty - 1).done(function () {
-                loadCartItems();
-            });
-        }
+        newQuantity = currentQty - 1;
     } else {
-        quantityElement.text(currentQty + 1);
-        
-        updateQuantityInDatabase(productCode, currentQty + 1).done(function () {
-            loadCartItems();
-        });
+        newQuantity = currentQty + 1;
+
     }
+
+    // Update quantity in the database
+    updateQuantityInDatabase(productCode, newQuantity).done(function (data) {
+        if (data === "Quantity updated successfully") {
+            loadCartItems();
+        } else {
+            alert(data);
+        }
+    });
 });
+
 
 
 //========================= Function to remove the item from the database =========================//
@@ -103,12 +110,12 @@ function removeItemFromDatabase(productCode, callback) {
         data: {
             productCode: productCode
         },
-        success: function(data) {
+        success: function (data) {
             if (typeof callback === 'function') {
                 callback();
             }
         },
-        error: function(xhr, status, error) {
+        error: function (xhr, status, error) {
             console.error("Error removing item:", status, error);
         }
     });
@@ -116,7 +123,7 @@ function removeItemFromDatabase(productCode, callback) {
 
 
 //================ Event handler for remove buttons (x) in  each cart item's end =============//
-$(document).on('click', '.cart', '.close', function (e) {
+$(document).on('click', '.cart .close', function (e) {
     e.preventDefault();
     var productCode = $(this).closest('.cart-item').find('.qty').data('product-code');
 
@@ -159,5 +166,61 @@ function updateTotalPrice() {
 
 //=============================== Checkout function ====================================//
 function checkout() {
-    // Implement the checkout logic here
+    var userId = $('input[name="userId"]').val();
+
+    var itemsToCheckout = [];
+
+    $('.cart-item').each(function () {
+        var productCode = $(this).find('.qty').data('product-code');
+        var selectedQty = parseInt($(this).find('.qty').text());
+
+
+        if (selectedQty > 0) {
+            var item = {
+                productCode: productCode,
+                selectedQty: selectedQty,
+                userId: userId
+            };
+
+            itemsToCheckout.push(item);
+        }
+    });
+
+
+    if (itemsToCheckout.length > 0) {
+        $.ajax({
+            type: "POST",
+            url: "checkout.php",
+            data: {
+                items: JSON.stringify(itemsToCheckout)
+            },
+            success: function (data) {
+                alert("Checkout successful!");
+                // Clear the temporary cart and update the cart display
+                clearTemporaryCart();
+                loadCartItems();
+            },
+            error: function (xhr, status, error) {
+                console.error("Error during checkout:", status, error);
+                alert("Checkout failed. Please try again later.");
+            }
+        });
+    } else {
+        alert("No items selected for checkout.");
+    }
 }
+
+//========================Function to clear the temporary cart========================//
+function clearTemporaryCart() {
+    $.ajax({
+        type: "POST",
+        url: "clear_temporary_cart.php", 
+        success: function (data) {
+            console.log("Temporary cart cleared.");
+        },
+        error: function (xhr, status, error) {
+            console.error("Error clearing temporary cart:", status, error);
+        }
+    });
+}
+

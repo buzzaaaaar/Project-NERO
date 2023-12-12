@@ -16,7 +16,9 @@ function getCartItemsFromDatabase() {
 
     if ($result->num_rows > 0) {
         $cartItems = [];
+        
         while ($row = $result->fetch_assoc()) {
+        
             $cartItems[] = $row;
         }
         $conn->close();
