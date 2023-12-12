@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  
+  
+}
+::selection{
+  background: rgba(2, 117, 240, 0.3);
+  
+}
+.wrapper{
+  max-width: 1200px;
+  padding: 0 20px;
+  
+  
+}
+.wrapper .parent-tab,
+.wrapper .child-tab{
+  margin-bottom: 50px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.18);
+  
+}
+.wrapper .parent-tab label,
+.wrapper .child-tab label{
+  background: rgb(6, 54, 112);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 3px;
+  position: relative;
+  z-index: 99;
+  transition: all 0.3s ease;
+}
+.wrapper .parent-tab label:hover{
+  background: #00c4e6;
+}
+.parent-tab input:checked ~ label,
+.child-tab input:checked ~ label{
+  border-radius: 3px 3px 0 0;
+  background: #006fe6;
+}
+.wrapper label span{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 0 -1px 1px #0056b3;
+}
+.wrapper .child-tab label span{
+  font-size: 17px;
+}
+.parent-tab label .icon{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  font-size: 15px;
+  color: #007bff;
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  text-shadow: 0 -1px 1px #0056b3;
+  
+}
+.wrapper .child-tab label .icon{
+  height: 27px;
+  width: 27px;
+  
+}
+.parent-tab label .icon i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.parent-tab input:checked ~ label .icon i:before,
+.child-tab input:checked ~ label .icon i:before{
+  content: '\f068';
+  
+
+}
+.wrapper .parent-tab .content,
+.wrapper .child-tab .sub-content{
+  max-height: 0px;
+  overflow: auto;
+  background: #fff;
+  border-radius: 0 0 3px 3px;
+  transition: all 0.4s ease;
+}
+.parent-tab input:checked ~ .content,
+.child-tab input:checked ~ .sub-content{
+  max-height: 100vh;
+}
+.tab-3 input:checked ~ .content{
+  padding: 15px 20px;
+}
+.parent-tab .content p,
+.child-tab .sub-content p{
+  padding: 15px 20px;
+  font-size: 16px;
+}
+.child-tab .sub-content p{
+  font-size: 15px;
+}
+input[type="radio"],
+input[type="checkbox"]{
+  display: none;
+}
+
+
+
+/* =========================== NavBar and Top header =========================== */
+
+.myCustom-QandA-cotainer {
+  background-color: var(--my-main-color);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+    
+}
+
+/* Set the colors for the icon */
+.myCustom-Shop-search-button{
+  color: #ffffff; 
+  border-color: #ffffff; 
+}
+.myCustom-Shop-search-button:hover {
+  color: var(--my-Search-Logo-color);
+  border-color: var(--my-Search-Logo-color);
+  background-color: #2a772a85;
+}
+
+.custom-search-form {
+  margin-left: 20px; /* Search Margin with Q&A */
+}
+
+.myCustom-Shop-icon {
+  font-size: 2rem; /* Adjust image Size */
+  border-radius: 10px; /* Make it circular */
+  transition: background-color 0.3s; 
+}
+
+.myCustom-Shop-icon:hover {
+  background-color: var(--my-color-transition);
+}
+
+.mynavbar-brand-custom{
+  border: none;
+  color: #000;
+}
+
+.nav-link{
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+.nav-link:hover{
+  background-color: var(--my-color-transition);
+}
+
+
+/* =========================== Root area =========================== */
+
+:root {
+  --my-Color-Pallette-Dark_Olive_Green:#627357;
+  --my-Color-Pallette-Laurel_Green:#A9B489;
+  --my-Color-Pallette-Cornsilk:#FCFCE4;
+  --my-Color-Pallette-Lemon_Meringue:#F9ECC9;
+  --my-Color-Pallette-Camel:#BA9470;
+  --my-Color-Pallette-Alloy_Orange:#C66828;
+  --my-Color-Pallette-Russet:#783E19;
+  
+  
+  --my-color: #ffffff;
+  --my-main-color: #5F6F52;
+  --my-color2: #738167;
+  --my-color3: #5fff7a;
+  --my-color-transition: #ffffff;
+  --my-Search-Logo-color: #00FF00;  /* Change Search-Logo-Border-color-hover */
+  
+  --my-Catagory-button-color: #5F6F52;  /* Change category-button-color */
+  --my-Catagory-button-color-hover: #8fa080;  /* Change category-button-color-hover */
+
+  /**/
+} 

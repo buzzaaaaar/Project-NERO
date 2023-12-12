@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
 // Search bar
 const SearchResultContainer = document.querySelector(".mySearch-results-container");
 const SearchInput = document.querySelector("#mySearchbarID");
@@ -91,3 +90,58 @@ function selectInput(element) {
     SearchInput.value = element.querySelector('li').innerHTML;
     SearchResultContainer.innerHTML = '';
 }
+
+
+function addToCart() {
+    console.log('addToCart function called');
+    // Get the product_id (assume you have a function to retrieve it from the database)
+    const urlParams = new URLSearchParams(window.location.search);
+    const itemId = urlParams.get('id');
+    var productId = itemId;
+
+    // Get the quantity input value
+    var quantity = document.getElementById('CartNumberInput').value;
+
+    // Prepare the data to be sent
+    var data = new URLSearchParams();
+    data.append('product_id', productId);
+    data.append('quantity', quantity);
+
+    console.log('Sending request to server...');
+
+    // Make a fetch POST request to the PHP file
+    fetch('../shop-DB-cart-send.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: data,
+    })
+    .then(response => {
+        console.log('Server responded:', response);
+        return response.json();  // Read the entire response as text
+    })
+    .then(data => {
+        console.log('Server response data:', data);
+        // Check if the response contains a "success" property
+        if (data && data.success) {
+            // Show a success alert to the user
+            alert(data.success);
+        } else {
+            // Show an error alert to the user
+            alert('Error: ' + data.error);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Show a generic error alert to the user
+        alert('An error occurred while processing your request.');
+    });
+}
+
+var addToCartButton = document.getElementById('CartNumberInputBTN');
+addToCartButton.addEventListener('click', function () {
+    addToCart();
+});
+
+

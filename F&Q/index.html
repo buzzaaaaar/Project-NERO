@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CDN with jquery -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     
+  <!-- Bootsrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+    crossorigin="anonymous"></script>
+
+        <!-- ===================================================  NavBar  ============================================================ -->
+
+    <div class="container-fluid fixed-top">
+        <div class="mx-3" style="background-color: none">
+          <div class="container-fluid align-items-center myCustom-QandA-cotainer">
+              <nav class="navbar navbar-expand-md">
+                  <div class="container-fluid">
+                      <!-- Logo -->
+                      <a class="navbar-brand" href="#">
+                          <img src="Q-and-A-images/nero-logo-1.png" alt="logo" height="50">
+                      </a>
+                      <!-- Menu button for smaller windows -->
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <!-- NavBar left side -->
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                          <ul class="navbar-nav mb-0 mb-lg-0">
+                              <li class="nav-item ">
+                                  <a class="nav-link active " aria-current="page" href="#">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link active" aria-current="about-us" href="#">About Us</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link active" aria-current="Q-A" href="#">Q & A</a>
+                              </li>
+                          </ul>
+                          <!-- Search bar / Icons imported via a Boostrap website-->
+                          <form class="d-flex custom-search-form my-3" role="search">
+                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                              <button class="btn myCustom-Shop-search-button" type="submit"><i class="bi bi-search"></i></button>
+                          </form>
+                          <!-- NavBar Righ side - Cart,Account / Icons imported via Boostrap website  -->
+                          <div class="navbar-log-cart-container d-flex align-items-center justify-content-center justify-content-md-end ms-auto">                       
+                              <a class="mynavbar-brand-custom position-relative px-3" href="#">
+                                  <i class="bi bi-cart myCustom-Shop-icon p-1 "></i>
+                                  <span class="position-absolute top start-50% translate-middle badge rounded-pill bg-danger">
+                                    1
+                                    <span class="visually-hidden">unread messages</span>
+                                  </span>
+                              </a>
+                              <a class="mynavbar-brand-custom" href="#">
+                                  <i class="bi bi-person-circle myCustom-Shop-icon p-1"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </nav>
+            </div>
+          </div>
+      
+
+
+
+    <!-- ===================================================  Q & A  ============================================================ -->
+
+
+
+    <div class="container d-flex justify-content-center align-items-start my-5">
+      <div class="wrapper">
+        <!--Accordion Heading 1-->
+        <div class="parent-tab">
+          <input type="radio" name="tab" id="tab-1" >
+          <label for="tab-1">
+            <span>Is this product authentic?</span>
+            <div class="icon"><i class="fas fa-plus"></i></div>
+          </label>
+          <div class="content">
+            <p>All goods sold by The Nero Store are 100% genuine and in the original manufacturers packaging (unless explicitly stated in the product listing).</p>
+          </div>
+        </div>
+        
+      
+        <!--Accordion Heading 2-->
+        <div class="parent-tab">
+          <input type="radio" name="tab" id="tab-2" >
+          <label for="tab-2">
+            <span>Are your products cruelty-free?</span>
+            <div class="icon"><i class="fas fa-plus"></i></div>
+          </label>
+          <div class="content">
+            <p>Yes, we are committed to providing cruelty-free beauty products. We do not test our products on animals</p>
+          </div>
+        </div>
+        
+        <!---->
+
+
+                                  <!-- Accordion Heading 3 -->
+        <div class="parent-tab">
+          <input type="radio" name="tab" id="tab-3" >
+          <label for="tab-3">
+            <span>Do you offer international shipping?</span>
+            <div class="icon"><i class="fas fa-plus"></i></div>
+          </label>
+          <div class="content">
+            <p>Yes, we do offer international shipping. Please check our shipping information page for details on delivery times and costs.</p>
+          </div>
+        </div>
+
+        <!-- Accordion Heading 4 -->
+        <div class="parent-tab">
+          <input type="radio" name="tab" id="tab-4">
+          <label for="tab-4">
+            <span>What payment methods do you accept?</span>
+            <div class="icon"><i class="fas fa-plus"></i></div>
+          </label>
+          <div class="content">
+            <p>We accept a variety of payment methods, including credit/debit cards, PayPal, and other secure payment options.</p>
+          </div>
+        </div>    
+                                          <!-- Accordion Heading 5 -->
+        <div class="parent-tab">
+          <input type="radio" name="tab" id="tab-5">
+          <label for="tab-5">
+            <span>Can I return a product if I'm not satisfied?</span>
+            <div class="icon"><i class="fas fa-plus"></i></div>
+          </label>
+          <div class="content">
+            <p>Yes, we have a hassle-free return policy. If you're not satisfied with your purchase, please refer to our returns and exchanges page for detailed instructions.</p>
+          </div>
+        </div>
+      </div>
+
+       
+
+
+
+
+
+
+
+    </div>
+
+</div>
+  
+
+</body>
+</html>

@@ -21,9 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="col p-1 myCustom-JS-filter-itenm">
                     <div class="card myCustom-Shop-item-card h-100">
                     <a href="Shop-Items/shop_item.html?id=${product.Product_ID}" class="card h-100 text-decoration-none">
-                    <button class="btn myCustom-Shop-item-float-button  "> <!-- Float Button -->
+                    <!-- Float Button -->
+                    <!-- 
+                    <button class="btn myCustom-Shop-item-float-button  "> 
                       <i class="bi bi-cart myCustom-Shop-icon-item"></i>
                     </button> 
+                    -->
                         
                     <div class="myCustom-Shop-image-container p-2">
                         <img src="${product.Product_Image}" class="card-img-top myCustom-Shop-itme-image" alt="...">

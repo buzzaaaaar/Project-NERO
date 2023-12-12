@@ -38,6 +38,19 @@ body {
     
 }
 
+/* Default styles for the navigation link */
+.Shop-myCutom-nav-text {
+  color: white !important;
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
+
+.Shop-myCutom-nav-text:hover {
+  color: var(--my-Color-Pallette-Dark_Olive_Green) !important;
+  background-color: white;
+}
+
+
 /* Set the colors for the icon */
 .myCustom-Shop-search-button{
   color: #ffffff; 
