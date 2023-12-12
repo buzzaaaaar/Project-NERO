@@ -2,9 +2,10 @@
 include 'shop-DB-connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize and validate input
+    
     $product_name = filter_input(INPUT_POST, "Product_Name", FILTER_SANITIZE_STRING);
     $product_price = filter_input(INPUT_POST, "product_Price", FILTER_VALIDATE_FLOAT);
+    $product_quantity = filter_input(INPUT_POST, "Product-quantity", FILTER_VALIDATE_INT);
     $discount = filter_input(INPUT_POST, "Discount", FILTER_VALIDATE_FLOAT);
     $free_shipping = ($_POST["free_shipping"] == "1") ? 1 : 0;
     $selectedBrand = filter_input(INPUT_POST, "brand", FILTER_SANITIZE_STRING);
@@ -24,11 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (move_uploaded_file($_FILES["product_image"]["tmp_name"], $target_file)) {
         // Image uploaded successfully, now insert data into the database
-        $sql = "INSERT INTO product_table (Product_Name, Product_Price, Discount, Discount_Percentage, Free_Shipping, Product_Brand, Product_Image, Product_Category) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO product_table (Product_Name, Product_Price, Discount, Discount_Percentage, Free_Shipping, Product_Brand, Product_Image, Product_Category, Product_Quantity) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sdddssss", $product_name, $product_price, $discount, $discount_percentage, $free_shipping, $selectedBrand, $target_file, $selectedCategory);
+        $stmt->bind_param("sdddssssi", $product_name, $product_price, $discount, $discount_percentage, $free_shipping, $selectedBrand, $target_file, $selectedCategory,  $product_quantity );
 
         if ($stmt->execute()) {
             echo json_encode(["message" => "Product added successfully"]);

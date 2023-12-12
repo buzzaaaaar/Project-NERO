@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     //  Filter button ---> Haircare
-    function handleButtonClick() {
+    function handleButtonClickHaircare() {
         const sourceElements = document.querySelectorAll('.myCustom-item-category-aa');
     
         sourceElements.forEach((sourceElement, index) => {
@@ -117,8 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterCategoryBtn12 = document.getElementById('myCutom-Category-JS-btn-12');
     
     if (filterCategoryBtn1 && filterCategoryBtn12) {
-        filterCategoryBtn1.addEventListener('click', handleButtonClick);
-        filterCategoryBtn12.addEventListener('click', handleButtonClick);
+        filterCategoryBtn1.addEventListener('click', handleButtonClickHaircare);
+        filterCategoryBtn12.addEventListener('click', handleButtonClickHaircare);
     } else {
         console.error('Button elements not found.');
     }
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     //  Filter button ---> Skincare
-    function handleButtonClick() {
+    function handleButtonClickSkincare() {
         const sourceElements = document.querySelectorAll('.myCustom-item-category-aa');
     
         sourceElements.forEach((sourceElement, index) => {
@@ -154,14 +154,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterCategoryBtn22 = document.getElementById('myCutom-Category-JS-btn-22');
     
     if (filterCategoryBtn2 && filterCategoryBtn22) {
-        filterCategoryBtn2.addEventListener('click', handleButtonClick);
-        filterCategoryBtn22.addEventListener('click', handleButtonClick);
+        filterCategoryBtn2.addEventListener('click', handleButtonClickSkincare);
+        filterCategoryBtn22.addEventListener('click', handleButtonClickSkincare);
     } else {
         console.error('Button elements not found.');
     }
 
     //  Filter button ---> Body-care
-    function handleButtonClick() {
+    function handleButtonClickBodycare() {
+        console.log('handleButtonClick function called Body-care');
         const sourceElements = document.querySelectorAll('.myCustom-item-category-aa');
     
         sourceElements.forEach((sourceElement, index) => {
@@ -189,15 +190,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterCategoryBtn32 = document.getElementById('myCutom-Category-JS-btn-32');
     
     if (filterCategoryBtn3 && filterCategoryBtn32) {
-        filterCategoryBtn3.addEventListener('click', handleButtonClick);
-        filterCategoryBtn32.addEventListener('click', handleButtonClick);
+        filterCategoryBtn3.addEventListener('click', handleButtonClickBodycare);
+        filterCategoryBtn32.addEventListener('click', handleButtonClickBodycare);
     } else {
         console.error('Button elements not found.');
     }
 
 
     //  Filter button ---> Makeup
-    function handleButtonClick() {
+    function handleButtonClickMakeup() {
+        console.log('handleButtonClick function called Makeup');
         const sourceElements = document.querySelectorAll('.myCustom-item-category-aa');
     
         sourceElements.forEach((sourceElement, index) => {
@@ -225,8 +227,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterCategoryBtn42 = document.getElementById('myCutom-Category-JS-btn-42');
     
     if (filterCategoryBtn4 && filterCategoryBtn42) {
-        filterCategoryBtn4.addEventListener('click', handleButtonClick);
-        filterCategoryBtn42.addEventListener('click', handleButtonClick);
+        filterCategoryBtn4.addEventListener('click', handleButtonClickMakeup);
+        filterCategoryBtn42.addEventListener('click', handleButtonClickMakeup);
     } else {
         console.error('Button elements not found.');
     }
