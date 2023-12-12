@@ -84,6 +84,16 @@
               </div>
             </div>
 
+            <!-- Product quantity -->
+            <div class="row my-3">
+              <div class="col-2 d-flex align-items-center justify-content-center">
+                <div> Product quantity</div>
+              </div>
+              <div class="col-10">
+                <input type="text" class="form-control" placeholder="Product quantity" aria-label="Product-quantity" aria-describedby="button-addon5" name="Product-quantity" id="ProductQuantity">
+              </div>
+            </div>
+
             <!-- Choose Brands -->
             <div class="row my-3">
               <div class="col-2 d-flex align-items-center justify-content-center">
@@ -91,7 +101,7 @@
               </div>
               <div class="col-10">
                 <select class="form-select" aria-label="Default select example" name="brand">
-                  <option value="Nero" selected>Nero</option>
+                  <option value="Mac Cosmetics" selected>Mac Cosmetics</option>
                   <option value="L’Oréal">L’Oréal</option>
                   <option value="Olays">Olays</option>
                   <option value="Sephora">Sephora</option>
@@ -158,6 +168,7 @@
                     <th>Discount_Percentage</th>
                     <th>Brand</th>
                     <th>Category</th>
+                    <th>Quantity</th>
                     
                 </tr>
             </table>
@@ -186,6 +197,7 @@
                           row.insertCell(6).innerText = product.Discount_Percentage;
                           row.insertCell(7).innerText = product.Product_Brand;
                           row.insertCell(8).innerText = product.Product_Category;
+                          row.insertCell(9).innerText = product.Product_Quantity;
                       });
                   })
                   .catch(error => console.error('Error:', error));

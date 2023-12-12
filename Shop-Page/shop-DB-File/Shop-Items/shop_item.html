@@ -55,13 +55,13 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav mb-0 mb-lg-0">
                                 <li class="nav-item ">
-                                    <a class="nav-link active " aria-current="page" href="#">Home</a>
+                                    <a class="nav-link active Shop-myCutom-nav-text " aria-current="page" href="#">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="about-us" href="#">About Us</a>
+                                    <a class="nav-link active Shop-myCutom-nav-text" aria-current="about-us" href="#">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="Q-A" href="#">Q & A</a>
+                                    <a class="nav-link active Shop-myCutom-nav-text" aria-current="Q-A" href="#">Q & A</a>
                                 </li>
                             </ul>
                             <!-- Search bar / Icons imported via a Font Awsome website-->
@@ -76,10 +76,10 @@
                             <div class="navbar-log-cart-container d-flex align-items-center justify-content-center justify-content-md-end ms-auto">                       
                                 <a class="mynavbar-brand-custom position-relative px-3" href="#">
                                     <i class="fa fa-shopping-cart myCustom-Shop-icon p-2"></i>
-                                    <span class="position-absolute top start-50% translate-middle badge rounded-pill bg-danger">
+                                    <!-- <span class="position-absolute top start-50% translate-middle badge rounded-pill bg-danger">
                                       1
                                       <span class="visually-hidden">unread messages</span>
-                                    </span>
+                                    </span> -->
                                 </a>
                                 <a class="mynavbar-brand-custom" href="#">
                                   <i class="fa fa-user-circle-o myCustom-Shop-icon p-2"></i>
@@ -104,18 +104,13 @@
                             <li class="list-group-item my-2 myCustom-shopitem-details-list2"><h3 id="itemBrand"></h3></li>
                             <li class="list-group-item my-2 myCustom-shopitem-details-list2"><h3 id="itemCategories"></h3></li>
                             <li class="list-group-item my-2 myCustom-shopitem-details-list2">      
-                        
+                                Type Quantity
                                   <div class="row">
                                     <div class="col-5 col-sm-4 col-md-5 col-lg-4 col-xl-3">
-                                        <select class="form-select-lg px-5" id="validationCustom04" required>
-                                            <option selected value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                          </select> 
+                                        <input type="number" class="form-control myCustom-shopItem-quantity " id="CartNumberInput" name="CartNumberInput" placeholder="Enter Quantity" value="1">
                                     </div>
                                     <div class="col">
-                                        <button type="button" class="btn btn-primary btn-lg mx-2 mx-sm-0">Add to Cart</button>
+                                        <button type="button" class="btn btn-primary btn myCustom-shopItem-quantity-btn mx-2 mx-sm-0" id="CartNumberInputBTN">Add to Cart</button>
                                     </div>
                                   </div>            
                             </li>

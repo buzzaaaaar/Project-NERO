@@ -15,6 +15,18 @@ body {
     
 }
 
+/* Default styles for the navigation link */
+.Shop-myCutom-nav-text {
+  color: white !important;
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
+
+.Shop-myCutom-nav-text:hover {
+  color: var(--my-Color-Pallette-Dark_Olive_Green) !important;
+  background-color: white;
+}
+
 /* Set the colors for the icon */
 .myCustom-Shop-search-button{
   color: #ffffff; 
@@ -87,6 +99,32 @@ body {
   background: radial-gradient(circle at center, #fcfcfc 0%, transparent 90%, transparent 100%);
 }
 
+
+
+/* Quntatiy */
+.myCustom-shopItem-quantity-btn{
+  width: 150px;
+}
+
+.myCustom-shopItem-quantity{
+  width: 150px;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .myCustom-shopItem-quantity-btn{
+    width: 130px;
+    
+  }
+}
+@media (max-width: 576px) {
+  .myCustom-shopItem-quantity {
+    width: 110px; 
+  }
+  .myCustom-shopItem-quantity-btn{
+    width: 110px;
+    
+  }
+}
 
 /* =========================== Root area =========================== */
 
