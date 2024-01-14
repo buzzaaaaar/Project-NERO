@@ -1,6 +1,6 @@
 <?php
 
-$server = "167.99.67.188";
+$server = "15.235.146.132";
 $user = "nero";
 $pw = "bD4z92R9";
 $db = "neroweb";
