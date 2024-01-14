@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Get the JSON object's data, sent from the client
+
 $itemsToCheckout = json_decode($_POST['items'], true);
 
 foreach ($itemsToCheckout as $item) {
